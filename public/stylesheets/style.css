@@ -1,0 +1,29 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+input {
+  outline: none;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+
+.content {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.room-name {
+  background-color: #ddd;
+}
+
+.messages {
+  width: 700px;
+  height: 300px;
+  overflow: auto;
+  background-color: #ccc;
+}

@@ -2,6 +2,7 @@ import http from "http";
 import fs from "fs";
 import path from "path";
 import mime from "mime";
+import chatServer from "./lib/chat-server";
 
 const cache = {};
 
@@ -25,7 +26,7 @@ const serveStatic = (response, cache, absPath) => {
   } else {
     fs.exists(absPath, (exists) => {
       if (exists) {
-        fs.readFile(absPath, function(err, data) {
+        fs.readFile(absPath, (err, data) => {
           if (err) {
             send404(response);
           } else {
@@ -48,4 +49,6 @@ const server = http.createServer((req, res) => {
 
 server.listen(3000, () => {
   console.log("Server listening on port 3000");
-})
+});
+
+chatServer.listen(server);

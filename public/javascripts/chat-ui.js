@@ -10,8 +10,6 @@ const processUserInput = (chatApp, socket) => {
   const message = $('.send-message').val();
   let systemMessage;
 
-  console.log('message >>>', message);
-
   if (message.charAt(0) === '/') {
     systemMessage = chatApp.processCommand(message);
     if (systemMessage) {

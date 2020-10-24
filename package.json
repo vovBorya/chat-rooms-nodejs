@@ -2,13 +2,26 @@
   "name": "chatrooms",
   "type": "module",
   "version": "0.0.1",
+  "author": "vovBorya",
+  "license": "MIT",
   "description": "Minimalist multiroom chat server",
+  "main": "server.js",
   "dependencies": {
     "mime": "~1.2.7",
     "socket.io": "~0.9.6"
   },
+  "script": {
+    "start": "node server.js"
+  },
   "devDependencies": {
     "eslint": "^7.12.0",
     "eslint-config-google": "^0.14.0"
+  },
+  "keywords": [
+    "chat room",
+    "heroku"
+  ],
+  "engines": {
+    "node": "14.x"
   }
 }

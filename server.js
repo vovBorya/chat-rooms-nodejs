@@ -5,7 +5,7 @@ import mime from 'mime';
 import {listenChatServer} from './lib/chat-server.js';
 
 const cache = {};
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const send404 = (response) => {
   response.writeHead(404, {'Content-Type': 'text/plain'});

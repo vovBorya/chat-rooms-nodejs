@@ -4,7 +4,11 @@
   "version": "0.0.1",
   "description": "Minimalist multiroom chat server",
   "dependencies": {
-    "socket.io": "~0.9.6",
-    "mime": "~1.2.7"
+    "mime": "~1.2.7",
+    "socket.io": "~0.9.6"
+  },
+  "devDependencies": {
+    "eslint": "^7.12.0",
+    "eslint-config-google": "^0.14.0"
   }
 }

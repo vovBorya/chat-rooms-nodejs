@@ -2,7 +2,7 @@ import http from 'http';
 import fs from 'fs';
 import path from 'path';
 import mime from 'mime';
-import chatServer from './lib/chat-server';
+import {listenChatServer} from './lib/chat-server.js';
 
 const cache = {};
 
@@ -51,4 +51,4 @@ server.listen(3000, () => {
   console.log('Server listening on port 3000');
 });
 
-chatServer.listen(server);
+listenChatServer(server);

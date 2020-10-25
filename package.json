@@ -10,7 +10,7 @@
     "mime": "~1.2.7",
     "socket.io": "~0.9.6"
   },
-  "script": {
+  "scripts": {
     "start": "node server.js"
   },
   "devDependencies": {

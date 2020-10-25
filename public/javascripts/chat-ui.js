@@ -51,6 +51,7 @@ $(() => {
   });
 
   socket.on('rooms', (rooms) => {
+    console.log('rooms >>>', rooms);
     $('.room-list').empty();
     for (let room in rooms) {
       room = room.substring(1, room.length);
@@ -60,7 +61,7 @@ $(() => {
     }
 
 
-    $('#room-list div').click(() => {
+    $('.room-list div').click(() => {
       chatApp.processCommand('/join ' + $(this).text());
       $('.send-message').focus();
     });
@@ -69,7 +70,7 @@ $(() => {
 
   setInterval(() => {
     socket.emit('rooms');
-  }, 800);
+  }, 1000);
 
   $('.send-message').focus();
 
